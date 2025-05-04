@@ -1,7 +1,7 @@
-import { Box, Flex, Button, Container, IconButton, Badge, useDisclosure } from '@chakra-ui/react'
+import { Box, Flex, Button, Container, IconButton, Badge, useDisclosure, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, Stack } from '@chakra-ui/react'
 import { Link as RouterLink } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { FaCoffee, FaShoppingCart } from 'react-icons/fa'
+import { FaCoffee, FaShoppingCart, FaBars } from 'react-icons/fa'
 import { useCart } from '../context/CartContext'
 import CartDrawer from './CartDrawer'
 
@@ -9,7 +9,10 @@ const MotionBox = motion(Box)
 
 const Navbar = () => {
   const { cartItemsCount } = useCart();
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen: isCartOpen, onOpen: onCartOpen, onClose: onCartClose } = useDisclosure();
+  const { isOpen: isMenuOpen, onOpen: onMenuOpen, onClose: onMenuClose } = useDisclosure();
+
+  const navItems = ['Home', 'Menu', 'About', 'Contact', 'Reservation'];
 
   return (
     <>
@@ -40,8 +43,13 @@ const Navbar = () => {
               </RouterLink>
             </MotionBox>
 
-            <Flex align="center" gap={{ base: 1, md: 4 }}>
-              {['Home', 'Menu', 'About', 'Contact', 'Reservation'].map((item) => (
+            {/* Desktop Navigation */}
+            <Flex 
+              align="center" 
+              gap={{ base: 1, md: 4 }}
+              display={{ base: 'none', md: 'flex' }}
+            >
+              {navItems.map((item) => (
                 <Button
                   key={item}
                   as={RouterLink}
@@ -71,18 +79,91 @@ const Navbar = () => {
                     </Badge>
                   )}
                 </>}
-                onClick={onOpen}
+                onClick={onCartOpen}
                 colorScheme="brown"
                 variant="ghost"
                 size="md"
                 position="relative"
               />
             </Flex>
+
+            {/* Mobile Navigation */}
+            <Flex
+              align="center"
+              gap={2}
+              display={{ base: 'flex', md: 'none' }}
+            >
+              <IconButton
+                aria-label="Shopping cart"
+                icon={<>
+                  <FaShoppingCart />
+                  {cartItemsCount > 0 && (
+                    <Badge
+                      colorScheme="brown"
+                      borderRadius="full"
+                      position="absolute"
+                      top="-8px"
+                      right="-8px"
+                      fontSize="0.8em"
+                    >
+                      {cartItemsCount}
+                    </Badge>
+                  )}
+                </>}
+                onClick={onCartOpen}
+                colorScheme="brown"
+                variant="ghost"
+                size="md"
+                position="relative"
+              />
+              <IconButton
+                display={{ base: 'flex', md: 'none' }}
+                aria-label="Open menu"
+                icon={<FaBars />}
+                onClick={onMenuOpen}
+                variant="ghost"
+              />
+            </Flex>
           </Flex>
         </Container>
       </Box>
 
-      <CartDrawer isOpen={isOpen} onClose={onClose} />
+      {/* Mobile Menu Drawer */}
+      <Drawer
+        isOpen={isMenuOpen}
+        placement="right"
+        onClose={onMenuClose}
+      >
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader borderBottomWidth="1px">
+            <Flex align="center" gap={2}>
+              <FaCoffee size="24px" color="#4A5568" />
+              <Box>Menu</Box>
+            </Flex>
+          </DrawerHeader>
+          <DrawerBody>
+            <Stack spacing={4} mt={4}>
+              {navItems.map((item) => (
+                <Button
+                  key={item}
+                  as={RouterLink}
+                  to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+                  variant="ghost"
+                  justifyContent="flex-start"
+                  w="100%"
+                  onClick={onMenuClose}
+                >
+                  {item}
+                </Button>
+              ))}
+            </Stack>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
+
+      <CartDrawer isOpen={isCartOpen} onClose={onCartClose} />
     </>
   )
 }
