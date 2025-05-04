@@ -1,0 +1,40 @@
+{
+  "images": {
+    "espresso": "https://images.unsplash.com/photo-1510591509098-7574dbd7a539?w=500&auto=format&fit=crop&q=60",
+    "cappuccino": "https://images.unsplash.com/photo-1534778101976-62847782c213?w=500&auto=format&fit=crop&q=60",
+    "latte": "https://images.unsplash.com/photo-1596078841242-54be1e5cf005?w=500&auto=format&fit=crop&q=60",
+    "matcha": "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=500&auto=format&fit=crop&q=60",
+    "gallery1": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=500&auto=format&fit=crop&q=60",
+    "gallery2": "https://images.unsplash.com/photo-1500353391678-d7b57979d6d2?w=500&auto=format&fit=crop&q=60",
+    "gallery3": "https://images.unsplash.com/photo-1481833761820-0509d3217039?w=500&auto=format&fit=crop&q=60",
+    "gallery4": "https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=500&auto=format&fit=crop&q=60",
+    "interior": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=500&auto=format&fit=crop&q=60"
+  },
+  "coffee": {
+    "espresso": "https://images.unsplash.com/photo-1596956470007-2bf6095e7e16?w=800&auto=format&fit=crop&q=80",
+    "cappuccino": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&auto=format&fit=crop&q=80",
+    "latte": "https://images.unsplash.com/photo-1577968897966-3d4325b36b61?w=800&auto=format&fit=crop&q=80",
+    "matcha": "https://images.unsplash.com/photo-1515823662972-da6a2e4d3d7e?w=800&auto=format&fit=crop&q=80",
+    "americano": "https://images.unsplash.com/photo-1580661644428-2f18eb129a42?w=800&auto=format&fit=crop&q=80",
+    "mocha": "https://images.unsplash.com/photo-1589396575653-c09c794ff6a6?w=800&auto=format&fit=crop&q=80",
+    "flatWhite": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=800&auto=format&fit=crop&q=80",
+    "icedCoffee": "https://images.unsplash.com/photo-1621221814631-e8bfdabd5ca4?w=800&auto=format&fit=crop&q=80",
+    "frappuccino": "https://images.unsplash.com/photo-1622871307455-2c5abb864bc0?w=800&auto=format&fit=crop&q=80"
+  },
+  "gallery": {
+    "coffee1": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&auto=format&fit=crop&q=80",
+    "coffee2": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80",
+    "coffee3": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=800&auto=format&fit=crop&q=80",
+    "coffee4": "https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=800&auto=format&fit=crop&q=80",
+    "barista": "https://images.unsplash.com/photo-1507914997-7d8306172500?w=800&auto=format&fit=crop&q=80",
+    "cafe1": "https://images.unsplash.com/photo-1482350325005-eda5e677279b?w=800&auto=format&fit=crop&q=80",
+    "cafe2": "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=800&auto=format&fit=crop&q=80",
+    "beans": "https://images.unsplash.com/photo-1624264541385-ad3977158612?w=800&auto=format&fit=crop&q=80"
+  },
+  "about": {
+    "team": "https://images.unsplash.com/photo-1523781150247-eb7547e908d0?w=800&auto=format&fit=crop&q=80",
+    "cafe": "https://images.unsplash.com/photo-1515283709260-ee29296f1534?w=800&auto=format&fit=crop&q=80",
+    "brewing": "https://images.unsplash.com/photo-1516725426950-c1acb54483e8?w=800&auto=format&fit=crop&q=80",
+    "interior": "https://images.unsplash.com/photo-1544148103-0773bf10d330?w=800&auto=format&fit=crop&q=80"
+  }
+} 

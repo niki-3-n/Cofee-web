@@ -1,0 +1,9 @@
+.git
+node_modules
+.github
+.editorconfig
+README.md
+.vscode
+*.log
+tsconfig.json
+tsconfig.node.json 
